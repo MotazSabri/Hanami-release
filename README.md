@@ -1,3 +1,5 @@
+![image](https://user-images.githubusercontent.com/72955854/217451232-d95cd8dc-2f6c-4594-9010-f5c6b1adfa38.png)
+
 # Hanami Live translator 
 
 This is Hanami, the live translator that captures any audio that comes from a WINDOWS speaker and microphones. Keep in mind that this is not an official product nor a research topic. It is a toy-proof of concept that may help some people find inspiration. Use it at your own risk. To use it, you select the speaker that you want the application to listen to (usually it’s the one that appears when you click on the speaker icon next to the taskbar clock) and select the source and target language. That’s it! now the spoken words will be translated! The app uses lightweight multiprocessing and processes audio in chunks where each chunk takes about 3 - 5 seconds to get processed.

@@ -49,6 +49,18 @@ You can also run the standalone version of Hanami (beta) from here with no depen
 10. The translation content is shown in the translation area with a font that matches the color mode of the app.
 11. Users may visit our site to place a request, show support or suggest an improvement.
 
+## What are we doing next
+1.	✅Create night mode and day mode to ease readability. 
+2.	✅Introduce basic noise reduction to empower the speech-to-text features.
+3.	✅Introduce enhanced logging to debug issues reported by users.
+4.	✅Support microphones listening.
+5.	✅Introduce weakly supported languages.
+6.	✅Introduce enhanced word tokenization to prevent gaps and overlaps between spoken statements.
+7.	✅Introduce Hanami modes to avoid computational overheads.
+8.	Add more stability to audio regularization and noise reduction, especially in weakly supported languages.
+9.	Introduce speaker identification to ultimately create a meeting log with speakers and their corresponding sentences.
+10.	Introduce a meeting summary in which every session log will be stored in a google doc with a summary of the meeting at the end.
+11.	create a knowledge tree where all the meeting logs are appended together to create a robust backend that can answer any question about whatever was spoken and heard by Hanami.
 
 ## Disclaimer
 

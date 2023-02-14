@@ -31,14 +31,13 @@ The application is operated by Python, it uses soundcard to capture the audio si
 ## Running The application
 You can also run the standalone version of Hanami (beta) from here with no dependency. As soon as you run the app, Hanami will check for updates and make sure you have the latest version. It also checks the connection with all translation servers starting. When the starting-up phase is complete, the app becomes usable. The layout of simplistic as shown below.
 
-![image](https://user-images.githubusercontent.com/72955854/216947099-bc5671cd-3bd8-4107-bdb1-86bf86b50ef5.png)
+![image](https://user-images.githubusercontent.com/72955854/218648169-cacb6c7e-ca48-43d4-a35a-3d720aa7688a.png)
 
 1.	The list of devices is loaded automatically as soon as the app is launched. the default speaker is selected. Listening starts as soon as the app starts. Users may update the speaker (or microphone) at any time via this list. The app will finish processing the last chunk and switch to the newly selected device as soon as the resource becomes available. 
 2. The Hanami operating status has three modes that are triggered automatically depending on the speaker device condition. The color of the small label next to the devices list will indicate the app status. once an audio device is selected, the app will be under the listening status, and the status label will be yellow. If the app failed to detect any audio signal from the selected source for any reason (there was no detected audio or the user selected an incorrect speaker, etc.) then the label color will be red. Finally, if the app captured the audio correctly and started the audio operations (text to speech and the translation) then the label color will be green.
 
 
-
-![image](https://user-images.githubusercontent.com/72955854/218648169-cacb6c7e-ca48-43d4-a35a-3d720aa7688a.png)
+![image](https://user-images.githubusercontent.com/72955854/216913404-f8ff936c-aaf1-4e3d-bbf5-fa47be424e55.png)
 3. User may update the devices list from the refresh menu item. the refresh functionality will automatically select the selected device upon completing the refresh process.
 4. To ease the readability, the user may hide the control panel that contains the device list and the selected languages. the user can toggle the visibility of the control panel by clicking the control visibility button again.
 5. To improve readability for all users, the day/night mode button will allow the user to change the entire look and feel of the experience from dark mode to light mode. Users may switch between modes by clicking on the day/night button again.

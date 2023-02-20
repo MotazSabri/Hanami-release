@@ -1,4 +1,4 @@
-![image](https://user-images.githubusercontent.com/72955854/217451232-d95cd8dc-2f6c-4594-9010-f5c6b1adfa38.png)
+![image](https://user-images.githubusercontent.com/72955854/220009519-8a178b7c-0321-4c1e-acee-51c36d769fbb.png)
 
 # Hanami Live translator 
 

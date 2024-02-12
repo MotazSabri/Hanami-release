@@ -1,4 +1,4 @@
-![image](https://user-images.githubusercontent.com/72955854/220009519-8a178b7c-0321-4c1e-acee-51c36d769fbb.png)
+![image](https://user-images.githubusercontent.com/72955854/220009586-706432b3-4a72-4906-b9be-edf0744239e0.png)
 
 # Hanami Live translator 
 
@@ -31,8 +31,7 @@ The application is operated by Python, it uses soundcard to capture the audio si
 ## Running The application
 You can also run the standalone version of Hanami (beta) from here with no dependency. As soon as you run the app, Hanami will check for updates and make sure you have the latest version. It also checks the connection with all translation servers starting. When the starting-up phase is complete, the app becomes usable. The layout of simplistic as shown below.
 
-![image](https://user-images.githubusercontent.com/72955854/218648169-cacb6c7e-ca48-43d4-a35a-3d720aa7688a.png)
-
+![image](https://github.com/MotazSabri/Hanami-release/assets/72955854/588bd6bb-287d-4775-ad1e-836601fe5209)
 1.	The list of devices is loaded automatically as soon as the app is launched. the default speaker is selected. Listening starts as soon as the app starts. Users may update the speaker (or microphone) at any time via this list. The app will finish processing the last chunk and switch to the newly selected device as soon as the resource becomes available. 
 2. The Hanami operating status has three modes that are triggered automatically depending on the speaker device condition. The color of the small label next to the devices list will indicate the app status. once an audio device is selected, the app will be under the listening status, and the status label will be yellow. If the app failed to detect any audio signal from the selected source for any reason (there was no detected audio or the user selected an incorrect speaker, etc.) then the label color will be red. Finally, if the app captured the audio correctly and started the audio operations (text to speech and the translation) then the label color will be green.
 
@@ -48,6 +47,7 @@ You can also run the standalone version of Hanami (beta) from here with no depen
 10. The translation content is shown in the translation area with a font that matches the color mode of the app.
 11. Users may visit our site to place a request, show support or suggest an improvement.
 [12,13,14,15,16]. The user can use the translation navigator to go through previously translated content.
+17. Users may choose whether they want to use the translation service or the text-to-speech service.
 
 ## What are we doing next
 1.	✅Create night mode and day mode to ease readability. 
@@ -59,7 +59,7 @@ You can also run the standalone version of Hanami (beta) from here with no depen
 7.	✅Introduce Hanami modes to avoid computational overheads.
 8.	✅Add translation navigation, resuming, and pausing.
 9.	✅Add a single channel. double-channel and quadruple channel audio device support.
-10.	Add more stability to audio regularization and noise reduction, especially in weakly supported languages.
+10.	✅Add more stability to audio regularization and noise reduction, especially in weakly supported languages.
 11.	Introduce speaker identification to ultimately create a meeting log with speakers and their corresponding sentences.
 12.	Introduce a meeting summary in which every session log will be stored in a google doc with a summary of the meeting at the end.
 13.	create a knowledge tree where all the meeting logs are appended together to create a robust backend that can answer any question about whatever was spoken and heard by Hanami.

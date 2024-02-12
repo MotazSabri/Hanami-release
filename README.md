@@ -34,8 +34,6 @@ You can also run the standalone version of Hanami (beta) from here with no depen
 ![image](https://github.com/MotazSabri/Hanami-release/assets/72955854/588bd6bb-287d-4775-ad1e-836601fe5209)
 1.	The list of devices is loaded automatically as soon as the app is launched. the default speaker is selected. Listening starts as soon as the app starts. Users may update the speaker (or microphone) at any time via this list. The app will finish processing the last chunk and switch to the newly selected device as soon as the resource becomes available. 
 2. The Hanami operating status has three modes that are triggered automatically depending on the speaker device condition. The color of the small label next to the devices list will indicate the app status. once an audio device is selected, the app will be under the listening status, and the status label will be yellow. If the app failed to detect any audio signal from the selected source for any reason (there was no detected audio or the user selected an incorrect speaker, etc.) then the label color will be red. Finally, if the app captured the audio correctly and started the audio operations (text to speech and the translation) then the label color will be green.
-
-
 ![image](https://user-images.githubusercontent.com/72955854/216913404-f8ff936c-aaf1-4e3d-bbf5-fa47be424e55.png)
 3. User may update the devices list from the refresh menu item. the refresh functionality will automatically select the selected device upon completing the refresh process.
 4. To ease the readability, the user may hide the control panel that contains the device list and the selected languages. the user can toggle the visibility of the control panel by clicking the control visibility button again.
@@ -47,6 +45,7 @@ You can also run the standalone version of Hanami (beta) from here with no depen
 10. The translation content is shown in the translation area with a font that matches the color mode of the app.
 11. Users may visit our site to place a request, show support or suggest an improvement.
 [12,13,14,15,16]. The user can use the translation navigator to go through previously translated content.
+
 17. Users may choose whether they want to use the translation service or the text-to-speech service.
 
 ## What are we doing next

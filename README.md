@@ -78,7 +78,8 @@ Hanami is designed to be an extension, not a full-windowed application. However,
    - **Compact Mode**: When the top controls are collapsed. 
 Users can customize the dimensions of the app in these two modes.
 
-   ![image](https://github.com/MotazSabri/Hanami-release/assets/72955854/4ecbbb32-cd43-4934-9376-2e16e61911b7)
+User may find these variables at Hanami directory under Assets folder in Interface_structure.json
+![image](https://github.com/MotazSabri/Hanami-release/assets/72955854/ffd136f6-9c98-4938-8c35-042eaa9648b5)
 
 
 ## What are we doing next

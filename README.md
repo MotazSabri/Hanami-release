@@ -31,22 +31,39 @@ The application is operated by Python, it uses soundcard to capture the audio si
 ## Running The application
 You can also run the standalone version of Hanami (beta) from here with no dependency. As soon as you run the app, Hanami will check for updates and make sure you have the latest version. It also checks the connection with all translation servers starting. When the starting-up phase is complete, the app becomes usable. The layout of simplistic as shown below.
 
-![image](https://github.com/MotazSabri/Hanami-release/assets/72955854/588bd6bb-287d-4775-ad1e-836601fe5209)
-1.	The list of devices is loaded automatically as soon as the app is launched. the default speaker is selected. Listening starts as soon as the app starts. Users may update the speaker (or microphone) at any time via this list. The app will finish processing the last chunk and switch to the newly selected device as soon as the resource becomes available. 
-2. The Hanami operating status has three modes that are triggered automatically depending on the speaker device condition. The color of the small label next to the devices list will indicate the app status. once an audio device is selected, the app will be under the listening status, and the status label will be yellow. If the app failed to detect any audio signal from the selected source for any reason (there was no detected audio or the user selected an incorrect speaker, etc.) then the label color will be red. Finally, if the app captured the audio correctly and started the audio operations (text to speech and the translation) then the label color will be green.
-![image](https://user-images.githubusercontent.com/72955854/216913404-f8ff936c-aaf1-4e3d-bbf5-fa47be424e55.png)
-3. User may update the devices list from the refresh menu item. the refresh functionality will automatically select the selected device upon completing the refresh process.
-4. To ease the readability, the user may hide the control panel that contains the device list and the selected languages. the user can toggle the visibility of the control panel by clicking the control visibility button again.
-5. To improve readability for all users, the day/night mode button will allow the user to change the entire look and feel of the experience from dark mode to light mode. Users may switch between modes by clicking on the day/night button again.
-6. User can pin the app to be always on top by clicking the pin button. The user may unpin the app by clicking on the pin button one more time.
-7. The user may close the app and all its operations by clicking the close button. the app will close all the threads and running services before shutting itself down.
-8. The user may select between a wide list of input languages. The target language and source language can’t be the same. therefore, any trial to set them to an equal value will trigger a protection switch.
-9. The user may select between a wide list of target languages. some languages text to speech and translation are more capable than others. to indicate language strength, a star is added next to the language with higher robustness.
-10. The translation content is shown in the translation area with a font that matches the color mode of the app.
-11. Users may visit our site to place a request, show support or suggest an improvement.
-[12,13,14,15,16]. The user can use the translation navigator to go through previously translated content.
+![image](https://github.com/MotazSabri/Hanami-release/assets/72955854/484e4c48-00ed-47b5-98a0-b23888db6aae)
+![image](https://github.com/MotazSabri/Hanami-release/assets/72955854/1fdedafb-771c-40f9-a803-7ae3052cf7bb)
 
-17. Users may choose whether they want to use the translation service or the text-to-speech service.
+1.	The list of devices loads automatically as soon as the app is launched. The default speaker is selected, and listening begins immediately. Users can update the speaker or microphone at any time via this list. The app will finish processing the last chunk and switch to the newly selected device as soon as the resource becomes available.
+2. TThe Hanami operating status has three modes that are triggered automatically depending on the speaker device condition. The color of the small label next to the device list indicates the app status. Once an audio device is selected, the app enters listening mode, and the status label turns yellow. If the app fails to detect any audio signal from the selected source for any reason (e.g., no detected audio or an incorrect speaker selection), the label color turns red. If the app captures the audio correctly and starts the audio operations (text-to-speech and translation), the label color turns green.
+![image](https://user-images.githubusercontent.com/72955854/216913404-f8ff936c-aaf1-4e3d-bbf5-fa47be424e55.png)
+3. Users can update the device list from the refresh menu item. The refresh functionality will automatically select the previously selected device upon completing the refresh process.
+4. For easier readability, users can hide the control panel that contains the device list and selected languages. The user can toggle the visibility of the control panel by clicking the control visibility button again.
+5. To improve readability for all users, the day/night mode button allows users to switch the entire look and feel of the experience between dark mode and light mode. Users can switch between modes by clicking the day/night button again.
+6. Users can pin the app to always stay on top by clicking the pin button. The app can be unpinned by clicking the pin button once more.
+7. Users can close the app and all its operations by clicking the close button. The app will close all threads and running services before shutting down.
+8. Users can select from a wide list of input languages. The target language and source language cannot be the same; therefore, any attempt to set them to an equal value will trigger a protection switch. Listening to languages marked with a ☆ offers better transcription.
+9. Users can select from a wide list of target languages. Some languages' text-to-speech and translation capabilities are stronger than others. To indicate language strength, a star is added next to languages with higher robustness. Translation to languages marked with a ☆ offers better quality.
+10. Users can choose whether they want to use the translation service, the text-to-speech service, or a mixture of both. The names of Hanami services are:
+- Translate (Translation Feature): Transforms input language audio to target language text.
+- Contrans (Concatenated Translation): Appends the last processed translation to the current one. The old translation appears on top in a smaller font, followed by the current (latest) translation at the bottom in a larger font.
+- Transcript (Transcription Feature): Converts detected audio to input language text.
+- Mixture (Mixture Feature): Appends transcribed text with translated text. The transcription appears on top in a smaller font, followed by the translation at the bottom in a larger font.
+
+11. The translation content is shown in the translation area with a font that matches the app's color mode.
+12. Users may visit our site to place a request, show support, or suggest improvements.
+13. Users can use the translation navigator to browse previously translated content.
+14. Users can erase all translation logs and chat history using the erase content feature. This is useful for continuous meetings where the user wishes to have separate contexts for further analysis.
+15. Users can store all translation and transcription logs to a text file. The file will be placed on the desktop as a text file. If users flush the logs using the reset content button, no logs will be saved until the audio detects more spoken content.
+16. Users can interact with their detected content using the GPT-based feature. Users can ask questions, request analysis, brainstorm ideas related to the data that Hanami has heard. Advanced requests such as creating meeting agendas, summarizing content, and more can be made. This GPT service is built on top of OpenAI GPT. Please be cautious about what you share, as it may be used for OpenAI model training.
+17. Within the GPT window, users will receive a system message with a yellow label. Users cannot copy this message (no copy button).
+18. Users can view their own requests, marked with a green label.
+19. Users can get the GPT response within the GPT window and may copy this text.
+20. The copy button overwrites the content in the user's clipboard. Please ensure your clipboard content is not lost.
+21. Users can interact with their data using the textbox, which only allows text entry. As soon as users enter text, the submit button becomes enabled and allows submitting the prompt.
+22. The submit button triggers a GPT request, which, once completed, will be shown to the user in the chatbox window.
+
+Please ensure not to share any sensitive information with Hanami.
 
 ## What are we doing next
 1.	✅Create night mode and day mode to ease readability. 
@@ -60,8 +77,8 @@ You can also run the standalone version of Hanami (beta) from here with no depen
 9.	✅Add a single channel. double-channel and quadruple channel audio device support.
 10.	✅Add more stability to audio regularization and noise reduction, especially in weakly supported languages.
 11.	Introduce speaker identification to ultimately create a meeting log with speakers and their corresponding sentences.
-12.	Introduce a meeting summary in which every session log will be stored in a google doc with a summary of the meeting at the end.
-13.	create a knowledge tree where all the meeting logs are appended together to create a robust backend that can answer any question about whatever was spoken and heard by Hanami.
+12.	✅Introduce a meeting summary in which every session log will be stored in a google doc with a summary of the meeting at the end.
+13.	✅create a knowledge tree where all the meeting logs are appended together to create a robust backend that can answer any question about whatever was spoken and heard by Hanami.
 
 ## Disclaimer
 

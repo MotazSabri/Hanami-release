@@ -1,4 +1,4 @@
-![image](https://user-images.githubusercontent.com/72955854/220009586-706432b3-4a72-4906-b9be-edf0744239e0.png)
+![image](https://github.com/MotazSabri/Hanami-release/assets/72955854/072bc9b2-c626-4c9f-8ebe-a342afab393d)
 
 # Hanami Live translator 
 

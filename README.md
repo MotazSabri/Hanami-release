@@ -26,7 +26,7 @@ The delay between the beginning of the speech and the translation appearing is 4
  All app operations are logged to Traces.log in the OS temp file allowing further debugging and optimization at the client side. No information is shared with the app developers.
  
 ## Components
-The application is operated by Python, it uses soundcard to capture the audio signal (which is a python Library), SpeechRecognition to convert binary audio to text (which is also a python library), and selenium to simulate web calls for deepl servers without API calls (leading to free of charge translations), The selenium (which is a python library) requires a browser to be available in the current environment. To avoid conflict in other environments, a portable version of google chrome with its matching chrome driver is provided with the app.
+The application is operated by Python, it uses soundcard to capture the audio signal (which is a python Library), SpeechRecognition to convert binary audio to text (which is also a python library), and selenium to simulate web calls for deepl and openAI servers without API calls (leading to free of charge translations), The selenium (which is a python library) requires a browser to be available in the current environment. To avoid conflict in other environments, a portable version of google chrome with its matching chrome driver is provided with the app.
 
 ## Running The application
 You can also run the standalone version of Hanami (beta) from here with no dependency. As soon as you run the app, Hanami will check for updates and make sure you have the latest version. It also checks the connection with all translation servers starting. When the starting-up phase is complete, the app becomes usable. The layout of simplistic as shown below.
@@ -64,6 +64,22 @@ You can also run the standalone version of Hanami (beta) from here with no depen
 22. The submit button triggers a GPT request, which, once completed, will be shown to the user in the chatbox window.
 
 Please ensure not to share any sensitive information with Hanami.
+
+### Customize Layout
+
+Hanami is designed to be an extension, not a full-windowed application. However, users may make minimal layout changes to alter:
+
+1. **Sub Text Fonts**: Modify the fonts used for subtext in Mixture Mode and ConTrans Mode.
+2. **Text Fonts**: Adjust the fonts used for the main application services, such as translation and transcriptions.
+3. **GPT Window Font**: Change the font in the GPT window, which is smaller than the main app screen and uses a smaller font by default.
+4. **Sample Rate**: Control the audio quality for transcription and translation services. A higher value means better results but at a slower rate.
+5. **Application Resolution**: Manage the app's width and height in two modes:
+   - **Extended Mode**: When the top controls are visible.
+   - **Compact Mode**: When the top controls are collapsed. 
+Users can customize the dimensions of the app in these two modes.
+
+   ![image](https://github.com/MotazSabri/Hanami-release/assets/72955854/4ecbbb32-cd43-4934-9376-2e16e61911b7)
+
 
 ## What are we doing next
 1.	✅Create night mode and day mode to ease readability. 

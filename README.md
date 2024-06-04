@@ -61,7 +61,7 @@ You can also run the standalone version of Hanami (beta) from here with no depen
 19. Users can get the GPT response within the GPT window and may copy this text.
 20. The copy button overwrites the content in the user's clipboard. Please ensure your clipboard content is not lost.
 21. Users can interact with their data using the textbox, which only allows text entry. As soon as users enter text, the submit button becomes enabled and allows submitting the prompt.
-22. The submit button triggers a GPT request, which, once completed, will be shown to the user in the chatbox window.
+22. The submit button triggers a GPT request, which, once completed, will be shown to the user in the chatbox window. The submit button will be disabled if the prompt box is empty or while the prompt is being generated (After the user clicks on the submit button). The generation process length depends on the generated content length but should not take between 5 to 10 seconds.
 
 Please ensure not to share any sensitive information with Hanami.
 
@@ -72,14 +72,97 @@ Hanami is designed to be an extension, not a full-windowed application. However,
 1. **Sub Text Fonts**: Modify the fonts used for subtext in Mixture Mode and ConTrans Mode.
 2. **Text Fonts**: Adjust the fonts used for the main application services, such as translation and transcriptions.
 3. **GPT Window Font**: Change the font in the GPT window, which is smaller than the main app screen and uses a smaller font by default.
-4. **Sample Rate**: Control the audio quality for transcription and translation services. A higher value means better results but at a slower rate.
-5. **Application Resolution**: Manage the app's width and height in two modes:
+4. **default_src_language**: Set the default source language to one of the supported languages listed below. If an unsupported language is set, Japanese will be used as the default.
+5. **default_tgt_language**: Set the default target language to one of the supported languages listed below. If an unsupported language is set, English will be used as the default.
+6. **Sample Rate**: Control the audio quality for transcription and translation services. A higher value means better results but at a slower rate.
+7. **Application Resolution**: Manage the app's width and height in two modes:
    - **Extended Mode**: When the top controls are visible.
    - **Compact Mode**: When the top controls are collapsed. 
 Users can customize the dimensions of the app in these two modes.
 
 User may find these variables at Hanami directory under Assets folder in Interface_structure.json
-![image](https://github.com/MotazSabri/Hanami-release/assets/72955854/ffd136f6-9c98-4938-8c35-042eaa9648b5)
+![image](https://github.com/MotazSabri/Hanami-release/assets/72955854/8c643569-2fd2-4eef-98bc-47f66be134ef)
+
+The following at Hanami Supported languages:
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:x="urn:schemas-microsoft-com:office:excel"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+
+<meta name=ProgId content=Excel.Sheet>
+<meta name=Generator content="Microsoft Excel 15">
+<link id=Main-File rel=Main-File
+href="file:///C:/Users/Motaz/AppData/Local/Temp/msohtmlclip1/01/clip.htm">
+<link rel=File-List
+href="file:///C:/Users/Motaz/AppData/Local/Temp/msohtmlclip1/01/clip_filelist.xml">
+<!--table
+	{mso-displayed-decimal-separator:"\.";
+	mso-displayed-thousand-separator:"\,";}
+@page
+	{margin:.75in .7in .75in .7in;
+	mso-header-margin:.3in;
+	mso-footer-margin:.3in;}
+tr
+	{mso-height-source:auto;}
+col
+	{mso-width-source:auto;}
+br
+	{mso-data-placement:same-cell;}
+td
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:Calibri, sans-serif;
+	mso-font-charset:0;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:bottom;
+	border:none;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	mso-protection:locked visible;
+	white-space:nowrap;
+	mso-rotate:0;}
+.xl65
+	{border:.5pt solid windowtext;}
+.xl66
+	{font-weight:700;
+	text-align:center;
+	border:.5pt solid windowtext;}
+-->
+</head>
+
+<body link="#0563C1" vlink="#954F72">
+
+
+  |   |   |   |   |   |   |  
+-- | -- | -- | -- | -- | -- | -- | --
+Japanese ☆ | Bulgarian ☆ | Estonian ☆ | Haitian Creole | Korean ☆ | Polish ☆ | Swahili | Welsh
+English ☆ | Catalan | Filipino | Hebrew | Latin | Portuguese | Swedish ☆ | Yiddish
+Afrikaans | Chinese Traditional | Finnish ☆ | Hindi | Latvian ☆ | Portuguese ☆ | Tamil |  
+Albanian | Chinese ☆ | French ☆ | Hungarian ☆ | Lithuanian ☆ | Romanian ☆ | Telugu |  
+Arabic ☆ | Croatian | Galician | Icelandic | Macedonian | Russian ☆ | Thai |  
+Azerbaijani | Czech ☆ | Georgian | Indonesian ☆ | Malay | Serbian | Turkish ☆ |  
+Basque | Danish ☆ | German ☆ | Irish | Maltese | Slovak ☆ | Ukrainian ☆ |  
+Belarusian | Dutch ☆ | Greek ☆ | Italian ☆ | Norwegian ☆ | Slovenian ☆ | Urdu |  
+Bengali | Esperanto | Gujarati | Kannada | Persian | Spanish ☆ | Vietnamese |  
+
+
+
+</body>
+
+</html>
+
+- Languages with ☆mark indicate superior translation quality. 
+- When setting default language, make sure to include the ☆.
 
 
 ## What are we doing next
@@ -88,14 +171,14 @@ User may find these variables at Hanami directory under Assets folder in Interfa
 3.	✅Introduce enhanced logging to debug issues reported by users.
 4.	✅Support microphones listening.
 5.	✅Introduce weakly supported languages.
-6.	✅Introduce enhanced word tokenization to prevent gaps and overlaps between spoken statements.
-7.	✅Introduce Hanami modes to avoid computational overheads.
-8.	✅Add translation navigation, resuming, and pausing.
-9.	✅Add a single channel. double-channel and quadruple channel audio device support.
-10.	✅Add more stability to audio regularization and noise reduction, especially in weakly supported languages.
-11.	Introduce speaker identification to ultimately create a meeting log with speakers and their corresponding sentences.
-12.	✅Introduce a meeting summary in which every session log will be stored in a google doc with a summary of the meeting at the end.
-13.	✅create a knowledge tree where all the meeting logs are appended together to create a robust backend that can answer any question about whatever was spoken and heard by Hanami.
+8.	✅Introduce enhanced word tokenization to prevent gaps and overlaps between spoken statements.
+9.	✅Introduce Hanami modes to avoid computational overheads.
+10.	✅Add translation navigation, resuming, and pausing.
+11.	✅Add a single channel. double-channel and quadruple channel audio device support.
+12.	✅Add more stability to audio regularization and noise reduction, especially in weakly supported languages.
+13.	Introduce speaker identification to ultimately create a meeting log with speakers and their corresponding sentences.
+14.	✅Introduce a meeting summary in which every session log will be stored in a google doc with a summary of the meeting at the end.
+15.	✅create a knowledge tree where all the meeting logs are appended together to create a robust backend that can answer any question about whatever was spoken and heard by Hanami.
 
 ## Disclaimer
 

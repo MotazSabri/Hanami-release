@@ -78,10 +78,12 @@ Hanami is designed to be an extension, not a full-windowed application. However,
 7. **Application Resolution**: Manage the app's width and height in two modes:
    - **Extended Mode**: When the top controls are visible.
    - **Compact Mode**: When the top controls are collapsed. 
+8. **GPT window Resolution**: Manage the GPT width and height in both modes.
+
 Users can customize the dimensions of the app in these two modes.
 
 User may find these variables at Hanami directory under Assets folder in Interface_structure.json
-![image](https://github.com/MotazSabri/Hanami-release/assets/72955854/8c643569-2fd2-4eef-98bc-47f66be134ef)
+![image](https://github.com/MotazSabri/Hanami-release/assets/72955854/e7dac4fd-1bdb-4de0-8688-5850756f5a1f)
 
 The following at Hanami Supported languages:
 <html xmlns:v="urn:schemas-microsoft-com:vml"

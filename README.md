@@ -31,15 +31,15 @@ The application is operated by Python, it uses soundcard to capture the audio si
 ## Running The application
 You can also run the standalone version of Hanami (beta) from here with no dependency. As soon as you run the app, Hanami will check for updates and make sure you have the latest version. It also checks the connection with all translation servers starting. When the starting-up phase is complete, the app becomes usable. The layout of simplistic as shown below.
 
-![image](https://github.com/MotazSabri/Hanami-release/assets/72955854/484e4c48-00ed-47b5-98a0-b23888db6aae)
-![image](https://github.com/MotazSabri/Hanami-release/assets/72955854/1fdedafb-771c-40f9-a803-7ae3052cf7bb)
+![image](https://github.com/MotazSabri/Hanami-release/assets/72955854/6b08e72d-b04a-40ee-b1d6-99bcfba3aba6)
+![image](https://github.com/MotazSabri/Hanami-release/assets/72955854/306e0c45-4d63-479f-b7f3-b365af4469db)
 
 1.	The list of devices loads automatically as soon as the app is launched. The default speaker is selected, and listening begins immediately. Users can update the speaker or microphone at any time via this list. The app will finish processing the last chunk and switch to the newly selected device as soon as the resource becomes available.
 2. TThe Hanami operating status has three modes that are triggered automatically depending on the speaker device condition. The color of the small label next to the device list indicates the app status. Once an audio device is selected, the app enters listening mode, and the status label turns yellow. If the app fails to detect any audio signal from the selected source for any reason (e.g., no detected audio or an incorrect speaker selection), the label color turns red. If the app captures the audio correctly and starts the audio operations (text-to-speech and translation), the label color turns green.
 ![image](https://user-images.githubusercontent.com/72955854/216913404-f8ff936c-aaf1-4e3d-bbf5-fa47be424e55.png)
 3. Users can update the device list from the refresh menu item. The refresh functionality will automatically select the previously selected device upon completing the refresh process.
-4. For easier readability, users can hide the control panel that contains the device list and selected languages. The user can toggle the visibility of the control panel by clicking the control visibility button again.
-5. To improve readability for all users, the day/night mode button allows users to switch the entire look and feel of the experience between dark mode and light mode. Users can switch between modes by clicking the day/night button again.
+4. For easier readability, users can hide the inputs selection panel that contains the device list and selected languages. The user can toggle the visibility of the control panel by clicking the control visibility button again.
+5. The user can edit the layout defaults from the control panel, such as text font sizes and language defaults, layout theme, and navigation position. Users may also restore the original defaults.
 6. Users can pin the app to always stay on top by clicking the pin button. The app can be unpinned by clicking the pin button once more.
 7. Users can close the app and all its operations by clicking the close button. The app will close all threads and running services before shutting down.
 8. Users can select from a wide list of input languages. The target language and source language cannot be the same; therefore, any attempt to set them to an equal value will trigger a protection switch. Listening to languages marked with a ☆ offers better transcription.
@@ -60,8 +60,9 @@ You can also run the standalone version of Hanami (beta) from here with no depen
 18. Users can view their own requests, marked with a green label.
 19. Users can get the GPT response within the GPT window and may copy this text.
 20. The copy button overwrites the content in the user's clipboard. Please ensure your clipboard content is not lost.
-21. Users can interact with their data using the textbox, which only allows text entry. As soon as users enter text, the submit button becomes enabled and allows submitting the prompt.
-22. The submit button triggers a GPT request, which, once completed, will be shown to the user in the chatbox window. The submit button will be disabled if the prompt box is empty or while the prompt is being generated (After the user clicks on the submit button). The generation process length depends on the generated content length but should not take between 5 to 10 seconds.
+21. The user may vertically scroll across the GPT window to observe the previous content.
+22. Users can interact with their data using the textbox, which only allows text entry. As soon as users enter text, the submit button becomes enabled and allows submitting the prompt.
+23. The submit button triggers a GPT request, which, once completed, will be shown to the user in the chatbox window. The submit button will be disabled if the prompt box is empty or while the prompt is being generated (After the user clicks on the submit button). The generation process length depends on the generated content length but should not take between 5 to 10 seconds.
 
 Please ensure not to share any sensitive information with Hanami.
 
@@ -69,21 +70,17 @@ Please ensure not to share any sensitive information with Hanami.
 
 Hanami is designed to be an extension, not a full-windowed application. However, users may make minimal layout changes to alter:
 
-1. **Sub Text Fonts**: Modify the fonts used for subtext in Mixture Mode and ConTrans Mode.
-2. **Text Fonts**: Adjust the fonts used for the main application services, such as translation and transcriptions.
-3. **GPT Window Font**: Change the font in the GPT window, which is smaller than the main app screen and uses a smaller font by default.
-4. **default_src_language**: Set the default source language to one of the supported languages listed below. If an unsupported language is set, Japanese will be used as the default.
-5. **default_tgt_language**: Set the default target language to one of the supported languages listed below. If an unsupported language is set, English will be used as the default.
-6. **Sample Rate**: Control the audio quality for transcription and translation services. A higher value means better results but at a slower rate.
-7. **Application Resolution**: Manage the app's width and height in two modes:
-   - **Extended Mode**: When the top controls are visible.
-   - **Compact Mode**: When the top controls are collapsed. 
-8. **GPT window Resolution**: Manage the GPT width and height in both modes.
-
-Users can customize the dimensions of the app in these two modes.
+1. **default_src_language**: Set the default source language to one of the supported languages listed below. If an unsupported language is set, Japanese will be used as the default.
+2. **default_tgt_language**: Set the default target language to one of the supported languages listed below. If an unsupported language is set, English will be used as the default.
+3. **Text Fonts**: Adjust the fonts used for the main application services, such as translation and transcriptions.
+4. **Sub Text Fonts**: Modify the fonts used for subtext in Mixture Mode and ConTrans Mode.
+5. **GPT Window Font**: Change the font in the GPT window, which is smaller than the main app screen and uses a smaller font by default.
+6. **Layout**: Control the layout theme of the app. It allows the user to choose either dark or light modes based on user reading preference.
+7. **History Navigation**: The position of the history bar position that allows the user to read previous translation messages within the same session.
+8. **Application Resolution**: Manage the app's height. The width of the application is not controllable.
 
 User may find these variables at Hanami directory under Assets folder in Interface_structure.json
-![image](https://github.com/MotazSabri/Hanami-release/assets/72955854/e7dac4fd-1bdb-4de0-8688-5850756f5a1f)
+![image](https://github.com/MotazSabri/Hanami-release/assets/72955854/c24c5e97-08eb-4ef2-9f85-be7b6e34e742)
 
 The following at Hanami Supported languages:
 <html xmlns:v="urn:schemas-microsoft-com:vml"

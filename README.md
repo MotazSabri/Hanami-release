@@ -78,9 +78,11 @@ Hanami is designed to be an extension, not a full-windowed application. However,
 6. **Layout**: Control the layout theme of the app. It allows the user to choose either dark or light modes based on user reading preference.
 7. **History Navigation**: The position of the history bar position that allows the user to read previous translation messages within the same session.
 8. **Application Resolution**: Manage the app's height. The width of the application is not controllable.
+9. **Proxy URL**: Manage the proxy that is used to contact the translation backend (Not transcription backend). Default is N/A and it can be set as ```http://proxy.example.com:8080```.
+
 
 User may find these variables at Hanami directory under Assets folder in Interface_structure.json
-![image](https://github.com/MotazSabri/Hanami-release/assets/72955854/c24c5e97-08eb-4ef2-9f85-be7b6e34e742)
+![image](https://github.com/user-attachments/assets/956aa785-4079-4209-a68c-8b85ebfbd4c3)
 
 The following at Hanami Supported languages:
 <html xmlns:v="urn:schemas-microsoft-com:vml"
